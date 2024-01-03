@@ -12,3 +12,4 @@ def uppercase(str):
                .format(ord(c) if not is_lower(c) else ord(c) - 32),
                end="")
     print("")
+    
