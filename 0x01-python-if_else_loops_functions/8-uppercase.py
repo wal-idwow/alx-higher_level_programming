@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def is_lower(c):
+def lower(c):
     if ord('a') <= ord(c) <= ord('z'):
         return True
     else:
@@ -9,6 +9,6 @@ def is_lower(c):
 
 def uppercase(s):
     for char in s:
-        print("{:c}".format(ord(char) if not is_lower(char) else ord(char) - 32),
+        print("{:c}".format(ord(char) if not lower(char) else ord(char) - 32),
               end="")
     print("")
