@@ -8,5 +8,3 @@ def uppercase(s):
             print(uppercase_char, end='')
         else:
             print(char, end='')
-    #print newline
-    print()
