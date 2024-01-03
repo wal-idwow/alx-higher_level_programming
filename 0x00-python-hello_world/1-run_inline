@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#set the envoronment variable
+export PYCODE=/home/walid/courses/alx-higher_level_programming/0x00-python-hello_world/main1.py
+
+#run the python script
+python3 "$PYCODE"
