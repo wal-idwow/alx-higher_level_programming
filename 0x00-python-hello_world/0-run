@@ -1,7 +1,4 @@
 #!/bin/bash
-
 #set the envoronment variable
 export PYFILE="/home/walid/courses/alx-higher_level_programming/main.py"
-
-#run the python script
 python3 "$PYFILE"
