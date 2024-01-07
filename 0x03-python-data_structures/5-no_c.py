@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#removes all characters c and C from a string.
 def no_c(my_string):
     fn = ""
     for num in range(len(my_string)):

@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#function that adds 2 tuples
 def add_tuple(tuple_a=(), tuple_b=()):
     # Use  0 for each missing integer in a tuple
     a = tuple_a + (0, 0)
