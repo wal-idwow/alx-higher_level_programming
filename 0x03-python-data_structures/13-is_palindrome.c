@@ -34,7 +34,7 @@ int is_palindrome(listint_t **head)
 	listint_t *second_half = reverse_list(onestp);
 	listint_t *first_half = *head;
 
-	while (seconid_half != NULL)
+	while (second_half != NULL)
 	{
 		if (first_half->n != second_half->n)
 	{
