@@ -13,4 +13,4 @@ def roman_to_int(roman_string):
             else:
                 result += x
             prev_x = x
-    return result
+    return result if 1 <= result <= 3999 else 0
