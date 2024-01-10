@@ -6,6 +6,7 @@ def roman_to_int(roman_string):
     
     if not isinstance(roman_string, str) or roman_string is None:
         return result
+    
     for i in reversed(roman_string):
             x = rom_num.get(i, 0)
             if x < prev_x:
@@ -13,4 +14,5 @@ def roman_to_int(roman_string):
             else:
                 result += x
             prev_x = x
+    
     return result if 1 <= result <= 3999 else 0
