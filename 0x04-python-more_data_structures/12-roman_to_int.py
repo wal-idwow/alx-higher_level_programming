@@ -4,7 +4,7 @@ def roman_to_int(roman_string):
     result = 0
     prev_x = 0
     
-    if not isinstance(roman_string, str) or not roman_string:
+    if not isinstance(roman_string, str) or roman_string is None:
         return result
     for i in reversed(roman_string):
             x = rom_num.get(i, 0)
