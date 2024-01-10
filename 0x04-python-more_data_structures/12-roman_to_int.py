@@ -1,24 +1,46 @@
 #!/usr/bin/python3
 
 def value(DECI):
-    roman_values = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
-    return roman_values.get(DECI, 0)
+    if DECI == 'I':
+        return 1
+    if DECI == 'V':
+        return 5
+    if DECI == 'X':
+        return 10
+    if DECI == 'L':
+        return 50
+    if DECI == 'C':
+        return 100
+    if DECI == 'D':
+        return 500
+    if DECI == 'M':
+        return 1000
+    return 0
+
 
 def roman_to_int(roman_string):
-    if not isinstance(roman_string, str) or not roman_string:
+    if not roman_string:
+        return 0
+
+    if not isinstance(roman_string, str):
         return 0
 
     result = 0
-    prev_value = 0
+    i = 0
 
-    for char in reversed(roman_string):
-        current_value = value(char)
+    while i < len(roman_string):
+        vl1 = value(roman_string[i])
 
-        if current_value >= prev_value:
-            result += current_value
+        if i + 1 < len(roman_string):
+            vl2 = value(roman_string[i + 1])
+
+            if vl1 >= vl2:
+                result = result + vl1
+                i = i + 1
+            else:
+                result = result + vl2 - vl1
+                i = i + 2
         else:
-            result -= current_value
-
-        prev_value = current_value
-
+            result = result + vl1
+            i = i + 1
     return result
