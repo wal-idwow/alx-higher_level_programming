@@ -1,19 +1,46 @@
 #!/usr/bin/python3
 
+def value(roman):
+    if roman == 'I':
+        return 1
+    if roman == 'V':
+        return 5
+    if roman == 'X':
+        return 10
+    if roman == 'L':
+        return 50
+    if roman == 'C':
+        return 100
+    if roman == 'D':
+        return 500
+    if roman == 'M':
+        return 1000
+    return 0
+
+
 def roman_to_int(roman_string):
-    rom_num = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    if not roman_string:
+        return 0
+
+    if not isinstance(roman_string, str):
+        return 0
+
     result = 0
-    prev_x = 0
-    
-    if not isinstance(roman_string, str) or roman_string is None:
-        return result
-    
-    for i in reversed(roman_string):
-            x = rom_num.get(i, 0)
-            if x < prev_x:
-                result -= x
+    i = 0
+
+    while i < len(roman_string):
+        vl1 = value(roman_string[i])
+
+        if i + 1 < len(roman_string):
+            vl2 = value(roman_string[i + 1])
+
+            if vl1 >= vl2:
+                result = result + vl1
+                i = i + 1
             else:
-                result += x
-            prev_x = x
-    
-    return result if 1 <= result <= 3999 else 0
+                result = result + vl2 - vl1
+                i = i + 2
+        else:
+            result = result + vl1
+            i = i + 1
+    return result
