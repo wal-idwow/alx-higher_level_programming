@@ -21,7 +21,7 @@ def list_division(my_list_1, my_list_2, list_length):
             print("out of range")
             results.append(0)
 
-        except (ValueError, ZeroDivisionError) as e:
+        except (TypeError, ZeroDivisionError) as e:
             print(e)
             results.append(0)
 
