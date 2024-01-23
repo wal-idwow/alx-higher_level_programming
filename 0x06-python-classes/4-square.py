@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 """Defines a class Square"""
 
-
 class Square:
     """
-    class define square properties by: (based on 1-square.py)
+    Class that defines square properties.
 
     Attributes:
         size: square size
@@ -14,8 +13,7 @@ class Square:
 
     @property
     def size(self):
-        """Returns the size of a square
-        """
+        """Returns the size of a square."""
         return self.__size
 
     @size.setter
@@ -35,9 +33,10 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
-    def area (self):
-        """Calculates the area of square.
+    def area(self):
+        """Calculates the area of a square.
 
-        Returns: the current square area.
+        Returns:
+            int: The current square area.
         """
         return self.__size ** 2
