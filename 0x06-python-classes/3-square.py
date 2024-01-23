@@ -4,13 +4,13 @@
 
 class Square:
     """
-    define square properties by: (based on 1-square.py)
+    class define square properties by: (based on 1-square.py)
 
     Attributes:
         size: square size
     """
     def __init__(self, size=0):
-        """ new instance of square
+        """ create new instance of square
 
         Args:
             size: square size
