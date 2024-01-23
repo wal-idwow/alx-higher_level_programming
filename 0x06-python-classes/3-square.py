@@ -4,7 +4,7 @@
 
 class Square:
     """
-    class that define square properties by: (based on 1-square.py)
+    Class that define square properties by: (based on 1-square.py)
 
     Attributes:
         size: square size
@@ -15,6 +15,8 @@ class Square:
         Args:
             size: square size
         """
+        self.__size = size
+
         if not isinstance (size, int):
             raise TypeError("size must be an integer")
         if size < 0:
