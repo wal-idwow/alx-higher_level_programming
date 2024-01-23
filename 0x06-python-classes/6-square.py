@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Defines a class Square"""
+"""
+Defines a class Square
+"""
+
 class Square:
     """
     define square properties by: (based on 1-square.py)
@@ -11,22 +14,20 @@ class Square:
         """creates new instances of square.
 
         Args:
-            __size (int): size of the square (1 side).
-            __position (tuple): position of the square.
+            size (int): size of the square (1 side).
+            position (tuple): position of the square.
         """
         self.size = size
         self.position = position
 
     @property
     def size(self):
-        """returns the size of a square
-        """
+        """returns the size of a square"""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """Returns the size of a square
-        """
+        """Returns the size of a square"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -36,13 +37,12 @@ class Square:
 
     @property
     def position(self):
-        """Returns the position of the square
-        """
+        """Returns the position of the square"""
         return self.__position
 
     @position.setter
     def position(self, value):
-        """Property setter for position.
+        """set the position of the square.
 
         Args:
             value (tuple): position of the square.
@@ -50,7 +50,13 @@ class Square:
         Raises:
             TypeError: position must be a tuple of 2 positive integers
         """
-        if not isinstance(value, tuple) or len(value) != 2 or not all(isinstance(i, int) for i in value) or value[0] < 0 or value[1] < 0:
+        if (
+            not isinstance(value, tuple) or
+            len(value) != 2 or
+            not all(isinstance(i, int) for i in value) or
+            value[0] < 0 or
+            value[1] < 0
+        ):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
