@@ -9,7 +9,7 @@ class Square:
         size: square size
     """
     def __init__(self, size):
-        """new square instance 
+        """new square instance
 
         Attribute:
             size: square size"""
