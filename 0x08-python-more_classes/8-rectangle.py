@@ -2,7 +2,6 @@
 """Defines a Rectangle class."""
 
 
-
 class Rectangle:
     """
     Class Rectangle with validated private instance attributes width and height
@@ -37,6 +36,7 @@ class Rectangle:
 
     @property
     def width(self):
+        """Get the height of the Rectangle."""
         return self.__width
 
     @width.setter
@@ -58,6 +58,7 @@ class Rectangle:
 
     @property
     def height(self):
+        """Get the height of the Rectangle."""
         return self.__height
 
     @height.setter
