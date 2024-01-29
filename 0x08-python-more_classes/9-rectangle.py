@@ -1,6 +1,15 @@
 #!/usr/bin/python3
-class Rectangle:
+"""Defines a Rectangle class."""
 
+
+class Rectangle:
+    """
+    Class Rectangle with validated private instance attributes width and height
+
+    Attributes:
+        number_of_instances: number of instances of Rectangle
+        print_symbol: symbol used for string representation
+    """
     number_of_instances = 0
     print_symbol = '#'
 
