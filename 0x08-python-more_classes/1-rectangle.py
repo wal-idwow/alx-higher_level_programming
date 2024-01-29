@@ -4,6 +4,7 @@
 
 class Rectangle:
     """class Rectangle defines a rectangle by: (based on 0-rectangle.py)
+
         attribute:
             width (int): rectangle width
             height (int): rectangle height
@@ -21,6 +22,7 @@ class Rectangle:
     @property
     def width(self):
         """retrive width
+
             Returns:
                 int: rectangle width
         """
@@ -29,6 +31,7 @@ class Rectangle:
     @property
     def height(self):
         """retrive height
+
             Returns:
                 int: rectangle height
         """
@@ -37,8 +40,10 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """setter of rectangle width
+
             Args:
                 value (int): rectangle width
+
             Raise:
                 TypeError: if width is not an intager.
                 ValueError: if width is less than 0.
@@ -54,8 +59,10 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """setter of recyangle height.
+
         Args:
             value (int): rectangle height.
+
         Raises:
             TypeError: if height is not an integer.
             ValueError: if height is less than 0.
