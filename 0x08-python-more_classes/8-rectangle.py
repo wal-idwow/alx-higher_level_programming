@@ -10,6 +10,7 @@ class Rectangle:
         number_of_instances: number of instances of Rectangle
         print_symbol: symbol used for string representation
     """
+
     print_symbol = "#"
     number_of_instances = 0
 
