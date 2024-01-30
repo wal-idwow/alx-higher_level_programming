@@ -89,7 +89,7 @@ class Rectangle:
 
     def __repr__(self):
         """returns a string representation able to create new instance"""
-        return ("Rectangle({0}, {1})".format(self.__width, self.__height))
+        return "Rectangle({0}, {1})".format(self.__width, self.__height)
 
     def __del__(self):
         """prints 'Bye rectangle...' when instance is deleted"""
