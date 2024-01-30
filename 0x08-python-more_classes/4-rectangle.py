@@ -3,7 +3,10 @@
 
 
 class Rectangle:
-    """Class representing a rectangle
+    """Represent a rectangle.
+
+    Attributes:
+        number_of_instances (int): The number of Rectangle instances.
     """
     def __init__(self, width=0, height=0):
         """Instantiation with optional width and height parameters.
@@ -69,7 +72,7 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Returns the area of the rectangle.
+        """area of the rectangle.
 
         Returns:
             int: The area.
@@ -77,7 +80,7 @@ class Rectangle:
         return self.__width * self.__height
 
     def perimeter(self):
-        """Returns the perimeter of the rectangle.
+        """perimeter of the rectangle.
 
         Returns:
             int: The perimeter.
@@ -87,7 +90,7 @@ class Rectangle:
         return self.__width * 2 + self.__height * 2
 
     def __str__(self):
-        """Returns a string representation of the rectangle using the character #.
+        """string representation of the rectangle using the character #.
 
         Returns:
             str: The rectangle.
@@ -98,7 +101,7 @@ class Rectangle:
                 for j in range(self.__height)]))
 
     def __repr__(self):
-        """Returns a string representation of the rectangle.
+        """string representation of the rectangle.
 
         Returns:
             str: A string representation of the rectangle.

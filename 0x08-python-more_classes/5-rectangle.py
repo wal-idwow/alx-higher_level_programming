@@ -39,7 +39,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """Get/set  height of  Rectangle."""
+        """Get height of  Rectangle."""
         return self.__height
 
     @height.setter
@@ -93,4 +93,3 @@ class Rectangle:
     def __del__(self):
         """Print a message for every deletion of a Rectangle."""
         print("Bye rectangle...")
-        
