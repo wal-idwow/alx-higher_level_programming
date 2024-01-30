@@ -1,7 +1,13 @@
 #!/usr/bin/python3
+"""Defines a Rectangle class."""
+
 
 class Rectangle:
-    """Defines a rectangle by width and height."""
+    """Represent a rectangle.
+
+    Attributes:
+        number_of_instances (int): The number of Rectangle instances.
+    """
 
     number_of_instances = 0
     print_symbol = "#"
