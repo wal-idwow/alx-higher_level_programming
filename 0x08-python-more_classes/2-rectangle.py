@@ -13,8 +13,8 @@ class Rectangle:
         """Creates a new instance of Rectangle
         
         Args:
-            width (int, optional): _description_. Defaults to 0.
-            height (int, optional): _description_. Defaults to 0.
+            width (int): rectangle width. Defaults to 0.
+            height (int): rectangle height. Defaults to 0.
         """
         self.width = width
         self.height = height
