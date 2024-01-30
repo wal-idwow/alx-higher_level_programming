@@ -3,14 +3,16 @@
 
 
 class Rectangle:
-    """class Rectangle defines a rectangle by: (based on 0-rectangle.py)
+    """
+    class Rectangle defines a rectangle by: (based on 0-rectangle.py)
 
         attribute:
             width (int): rectangle width
             height (int): rectangle height
     """
     def __init__(self, width=0, height=0):
-        """new instance of rectangle
+        """
+        new instance of rectangle
 
         Args:
             width (int): rectangle width. Defaults to 0.
@@ -21,7 +23,8 @@ class Rectangle:
     
     @property
     def width(self):
-        """retrive width
+        """
+        retrive width
 
             Returns:
                 int: rectangle width
@@ -39,7 +42,8 @@ class Rectangle:
     
     @width.setter
     def width(self, value):
-        """setter of rectangle width
+        """
+        setter of rectangle width
 
             Args:
                 value (int): rectangle width
@@ -58,7 +62,8 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """setter of recyangle height.
+        """
+        setter of recyangle height.
 
         Args:
             value (int): rectangle height.
