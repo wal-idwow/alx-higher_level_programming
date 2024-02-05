@@ -1,10 +1,10 @@
 #!usr/bin/python3
-"""Method with Mylist class"""
+"""Method with MyList class"""
 
 
 class MyList(list):
     """class with method print_sorted"""
 
     def print_sorted(self):
-        """methde to print sorted list"""
+        """methde printing list sorted"""
         print(sorted(list(self)))
