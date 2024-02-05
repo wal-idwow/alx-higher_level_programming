@@ -2,10 +2,9 @@
 """Method with Mylist class"""
 
 
-class Mylist(list):
+class MyList(list):
     """class with method print_sorted"""
-    pass
 
     def print_sorted(self):
-        """methde to sorted list"""
+        """methde to print sorted list"""
         print(sorted(list(self)))
