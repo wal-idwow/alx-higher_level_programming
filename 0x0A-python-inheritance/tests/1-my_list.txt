@@ -9,28 +9,44 @@
     >>> my_list.print_sorted()
     []
 
-## append element
+## Append element
     >>> my_list.append(5)
     >>> my_list.append(3)
     >>> my_list.append(6)
     >>> my_list.print_sorted()
     [3, 5, 6]
 
+## Append zero
+    >>> my_list.append(0)
+    >>> my_list.print_sorted()
+    [0, 3, 5, 6]
+
 ## Sorting with negative numbers
     >>> my_list.append(-2)
     >>> my_list.append(-5)
     >>> my_list.print_sorted()
-    [-5, -2, 3, 5, 6]
+    [-5, -2, 0, 3, 5, 6]
 
 ## Sorting with repeated elements
     >>> my_list.append(3)
     >>> my_list.append(5)
     >>> my_list.append(3)
     >>> my_list.print_sorted()
-    [-5, -2, 3, 3, 3, 5, 5, 6]
+    [-5, -2, 0, 3, 3, 3, 5, 5, 6]
 
 ## Sorting with large numbers
     >>> my_list.append(1000)
     >>> my_list.append(999)
     >>> my_list.print_sorted()
-    [-5, -2, 3, 3, 3, 5, 5, 6, 999, 1000]
+    [-5, -2, 0, 3, 3, 3, 5, 5, 6, 999, 1000]
+
+## Sorting with a single element
+    >>> my_list.clear()
+    >>> my_list.append(42)
+    >>> my_list.print_sorted()
+    [42]
+
+## Sorting an empty list
+    >>> my_list.clear()
+    >>> my_list.print_sorted()
+    []
