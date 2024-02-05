@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Method lookup module
+    Module with Method lookup
 """
 
 
