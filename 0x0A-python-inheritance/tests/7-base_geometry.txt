@@ -84,11 +84,11 @@ Checking for non-integer types:
           Traceback (most recent call last):
           ...
           TypeError: frozenset must be an integer
-	  >>> vr.integer_validator("bytes", vr"bytes")
+	  >>> bsg.integer_validator("bytes", bsg"bytes")
           Traceback (most recent call last):
           ...
           TypeError: bytes must be an integer
-	  >>> vr.integer_validator("bytearrays", bytearray(vr"bytes"))
+	  >>> bsg.integer_validator("bytearrays", bytearray(bsg"bytes"))
           Traceback (most recent call last):
           ...
           TypeError: bytearrays must be an integer
