@@ -3,11 +3,11 @@
 
 
 def append_write(filename="", text=""):
-    """append str in the end of a UTF8 file.txt
+    """function to append str in the end of a UTF8 file
 
     Args:
-        filename (str): file name. Defaults to "".
-        text (str): string to append. Defaults to "".
+        filename (str): file name.
+        text (str): string to append.
     
     Returns:
         number of character appended
