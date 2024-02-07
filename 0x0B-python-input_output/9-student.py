@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """Define a student by Fs/Ls name, age"""
+
+
 class Student:
     """Student Class"""
-
 
     def __init__(self, first_name, last_name, age):
         """Instantiation"""
