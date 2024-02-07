@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+"""Define pascal trinagle function"""
+
+
 def pascal_triangle(n):
-    """Pascals triangle of n"""
+    """Pascals triangle"""
     lists = []
     triangle = [[1]]
 
