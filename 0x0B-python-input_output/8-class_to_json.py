@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""Define function that returns the dictionary description with simple data structure"""
+"""Define function that returns the dictionary description"""
 import json
 
 
 def class_to_json(obj):
-    """function returns dictionary desc with simple data structure"""
-    dictionnaire = {}
+    """function returns dictionary desc"""
+    lt = {}
     if hasattr(obj, "__dict__"):
-        dictionnaire = obj.__dict__.copy()
-    return dictionnaire
+        lt = obj.__dict__.copy()
+    return lt
