@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""define JSON representation of an object function"""
+"""Define JSON representation of an object function"""
 import json
 
 
