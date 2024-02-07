@@ -6,6 +6,6 @@ import json
 def class_to_json(obj):
     """function returns dictionary desc with simple data structure"""
     dictionnaire = {}
-    if hasattr(obj, "__dic__"):
-        dictionnaire = obj.__dic__.copy()
+    if hasattr(obj, "__dict__"):
+        dictionnaire = obj.__dict__.copy()
     return dictionnaire
