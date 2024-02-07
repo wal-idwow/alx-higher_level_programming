@@ -5,7 +5,7 @@ class MyInt(int):
     """invert int operators == and !=."""
 
     def __new__(cls, value):
-        """create a new instance with inverted behavior."""
+        """create new instance with inverted behavior."""
         return super().__new__(cls, value)
 
     def __eq__(self, value):
