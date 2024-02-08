@@ -8,7 +8,7 @@ def append_after(filename="", search_string="", new_string=""):
     with open(filename) as i:
         for ln in i:
             cont += ln
-            if search_string in ln: 
+            if search_string in ln:
                 cont += new_string
     with open(filename, "w") as w:
         w.write(cont)
