@@ -3,10 +3,10 @@
 module containing a script that reads stdin line by line and computes metrics.
 Every 10 lines and after a keyboard interruption (CTRL + C), it prints the statistics
 since the beginning:
-Total file size: File size: <total size> (the sum of all previous sizes)
+File size: File size: <total size> (the sum of all previous sizes)
 Number of lines by status code:
 Possible status codes: 200, 301, 400, 401, 403, 404, 405, and 500
-If a status code doesn’t appear, don’t print anything for that status code.
+If a status code doesnt appear, dont print anything for that status code.
 Format: <status code>: <number>
 Status codes should be printed in ascending order.
 """
@@ -43,20 +43,20 @@ try:
 
         # print statistics every 10 lines
         if COUNT % 10 == 0:
-            print(f"Total file size: {SIZE}")
+            print(f"File size: {SIZE}")
             for code in sorted(status_code_count):
                 if status_code_count[code]:
                     print(f"{code}: {status_code_count[code]}")
 
     # print final statistics after processing all input lines
-    print(f"Total file size: {SIZE}")
+    print(f"File size: {SIZE}")
     for code in sorted(status_code_count):
         if status_code_count[code]:
             print(f"{code}: {status_code_count[code]}")
 
 except KeyboardInterrupt:
     # print final statistics on keyboard interruption (Ctrl + C)
-    print(f"Total file size: {SIZE}")
+    print(f"File size: {SIZE}")
     for code in sorted(status_code_count):
         if status_code_count[code]:
             print(f"{code}: {status_code_count[code]}")
