@@ -10,8 +10,8 @@ If a status code doesnt appear, dont print anything for that status code.
 Format: <status code>: <number>
 Status codes should be printed in ascending order.
 """
-
 import sys
+
 
 SIZE = 0
 status_code_count = {"200": 0, "301": 0, "400": 0, "401": 0,
@@ -25,7 +25,7 @@ try:
         tokens = line.split()
 
         if len(tokens) >= 2:
-            current_line_count = COUNT
+            CURRENT_LINE_COUNT = COUNT
             status_code = tokens[-2]
 
             if status_code in status_code_count:
@@ -35,27 +35,24 @@ try:
             try:
                 file_size = int(tokens[-1])
                 SIZE += file_size
-                if current_line_count == COUNT:
+                if CURRENT_LINE_COUNT == COUNT:
                     COUNT += 1
             except ValueError:
-                if current_line_count == COUNT:
+                if CURRENT_LINE_COUNT == COUNT:
                     continue
 
-        # print statistics every 10 lines
         if COUNT % 10 == 0:
             print(f"File size: {SIZE}")
             for code in sorted(status_code_count):
                 if status_code_count[code]:
                     print(f"{code}: {status_code_count[code]}")
 
-    # print final statistics after processing all input lines
     print(f"File size: {SIZE}")
     for code in sorted(status_code_count):
         if status_code_count[code]:
             print(f"{code}: {status_code_count[code]}")
 
 except KeyboardInterrupt:
-    # print final statistics on keyboard interruption (Ctrl + C)
     print(f"File size: {SIZE}")
     for code in sorted(status_code_count):
         if status_code_count[code]:
