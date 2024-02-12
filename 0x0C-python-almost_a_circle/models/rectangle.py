@@ -46,7 +46,7 @@ class Rectangle(Base):
     def x(self):
         """x direction of rectangle"""
         return self.__x
-    
+
     @x.setter
     def x(self, value):
         """x setter"""
@@ -112,4 +112,3 @@ class Rectangle(Base):
             prop[key] = getattr(self, key)
 
         return prop
-        

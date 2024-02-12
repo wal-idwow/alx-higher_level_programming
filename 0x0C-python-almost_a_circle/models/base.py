@@ -91,7 +91,7 @@ class Base:
             lst_ky = ['id', 'size', 'x', 'y']
 
         lsts = []
-    
+
         if not list_objs:
             pass
         else:
