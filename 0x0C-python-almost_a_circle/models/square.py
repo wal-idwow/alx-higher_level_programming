@@ -16,7 +16,7 @@ class Square(Rectangle):
         first_str = "[Square]"
         second_str = " ({}) ".format(self. id)
         third_str = "{}/{} - ".format(self.x, self.y)
-        fourth_str = "{}/{}".format(self.width, self.height)
+        fourth_str = "{}".format(self.size)
 
         return first_str + second_str + third_str + fourth_str
 
