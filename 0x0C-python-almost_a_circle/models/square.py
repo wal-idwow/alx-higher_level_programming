@@ -35,7 +35,7 @@ class Square(Rectangle):
         """method update"""
         if args is not None and len(args) != 0:
             attr = ['id', 'size', 'x', 'y']
-            for i in (len(args)):
+            for i in range(len(args)):
                 if attr[i] == 'size':
                     setattr(self, 'width', args[i])
                     setattr(self, 'height', args[i])
