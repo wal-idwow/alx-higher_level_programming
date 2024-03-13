@@ -1,7 +1,7 @@
 -- lists all shows from hbtn_0d_tvshows_rate by their rating.
-SELECT tv_shows.title, SUM(tv_show_ratings.rate) AS rat
+SELECT tv_shows.title, COALESCE(SUM(tv_show_ratings.rate), 0) AS rating
 FROM tv_shows
-JOIN tv_show_ratings
+LEFT JOIN tv_show_ratings
      ON tv_show_ratings.show_id = tv_shows.id
 GROUP BY tv_shows.title
-ORDER BY rat DESC;
+ORDER BY rating DESC;
