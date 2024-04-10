@@ -2,10 +2,10 @@
 class Rectangle {
   constructor (w, h) {
     if (h > 0 && w > 0) {
-      this.height = h;
       this.width = w;
+      this.height = h;
     }
   }
 }
 
-module.export = Rectangle;
+module.exports = Rectangle;
