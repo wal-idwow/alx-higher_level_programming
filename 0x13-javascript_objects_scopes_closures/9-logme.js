@@ -2,6 +2,6 @@
 
 let c = 0;
 exports.logMe = function (item) {
-    console.log(c + ': ' + item);
-    c++;
+  console.log(c + ': ' + item);
+  c++;
 };
