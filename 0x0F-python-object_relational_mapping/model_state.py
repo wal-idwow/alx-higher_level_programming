@@ -9,6 +9,6 @@ Base = declarative_base(metadata=medata)
 
 class State(Base):
     """name and id attributes of each state"""
-    __tblname__= 'states'
+    __tablename__= 'states'
     name = Column(String(128), nullable=False)
     id = Column(Integer, unique=True, nullable=False, primary_key=True)

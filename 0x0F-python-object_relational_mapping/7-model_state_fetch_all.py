@@ -6,10 +6,11 @@ from sqlalchemy.orm import sessionmaker
 from model_state import State, Base
 
 if __name__ == "__main__":
-    eng = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
-                        .format(sys.argv[1], sys.argv[2], sys.argv[3]))
+    eng = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+                        .format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(eng)
     Session = sessionmaker(bind=eng)
     sess = Session()
-    for ins in sess.query(State).order_by(State.id):
-        print(ins.id, ins.name, sep=": ")
+    for ins in sess.query(State).order_by(State.id).all():
+        print("{}: {}".format(ins.id, ins.name))
+    sess.close()
