@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""value match given argument, safe from MySQL injections"""
+""" lists all cities of given state as arguments"""
 
 import sys
 import MySQLdb
