@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
     cur = DB.cursor()
     cur.execute("""SELECT * FROM states WHERE name
-                LIKE BINARY 'N%' ORDER BY states.id ASC;""")
+                LIKE BINARY 'N%' ORDER BY states.id""")
     rws = cur.fetchall()
     for rw in rws:
         print(rw)
