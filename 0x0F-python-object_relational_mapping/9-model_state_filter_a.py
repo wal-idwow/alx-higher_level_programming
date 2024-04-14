@@ -8,12 +8,12 @@ if __name__ == "__main__":
     from sqlalchemy.orm import Session
     from model_state import Base, State
 
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+    eng = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                         .format(sys.argv[1], sys.argv[2],
                                 sys.argv[3]), pool_pre_ping=True)
-    Base.metedata.create_all(engine)
+    Base.metedata.create_all(eng)
 
-    session = Session(engine)
+    session = Session(eng)
     for state in session.query(State)\
                         .filter(State.name.like('%a%'))\
                         .order_by(State.id):
