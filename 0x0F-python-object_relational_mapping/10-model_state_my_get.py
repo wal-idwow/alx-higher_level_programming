@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""prints the State object with the name passed as argument
-from the database hbtn_0e_6_usa"""
+"""List State object with the name passed as argument hbtn_0e_6_usa db"""
 from sys import argv
 from model_state import Base, State
 from sqlalchemy import (create_engine)
@@ -14,10 +13,10 @@ if __name__ == "__main__":
     Base.metadata.create_all(eng)
     Session = sessionmaker(bind=eng)
     session = Session()
-    state = session.query(State).\
+    states = session.query(State).\
         filter(State.name == argv[4]).order_by(State.id).all()
-    if state:
-        print("{}".format(state[0].id))
+    if states:
+        print("{}".format(states[0].id))
     else:
         print("Not found")
     session.close()
