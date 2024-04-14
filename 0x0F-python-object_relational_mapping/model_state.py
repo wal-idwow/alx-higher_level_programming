@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-"""state class and Base"""
+"""Class state definition"""
 
-from sqlalchemy import MetaData, Integer, String, Column
+from sqlalchemy import Integer, String, Column
 from sqlalchemy.ext.declarative import declarative_base
 
-medata = MetaData()
-Base = declarative_base(metadata=medata)
+Base = declarative_base()
 
 class State(Base):
     """name and id attributes of each state"""
-    __tablename__= 'states'
+
+    __tablename__ = 'states'
     name = Column(String(128), nullable=False)
-    id = Column(Integer, unique=True, nullable=False, primary_key=True)
+    id = Column(Integer, unique=True, nullable=False, primary_key=True, autoincrement=True)
