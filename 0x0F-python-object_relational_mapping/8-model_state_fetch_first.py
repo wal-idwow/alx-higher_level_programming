@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """prints the first State object from the database"""
 
-import sys
-from model_state import State, Base
-from sqlalchemy import create_engine
-from sqlalchemy.orm import Session
-
 if __name__ == "__main__":
+
+    import sys
+    from model_state import State, Base
+    from sqlalchemy import create_engine
+    from sqlalchemy.orm import Session
 
     eng = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                         .format(sys.argv[1], sys.argv[2],
