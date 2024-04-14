@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 """state class and Base"""
 
 from sqlalchemy import MetaData, Integer, String, Column
